@@ -32,7 +32,11 @@ const NavbarMenu = () => [
 ];
 
 const Navbar = () => {
-  return <nav>
+    // useState Hook
+    const [open, setOpen] = React.useState(false);
+  return (
+<>
+  <nav>
     <div className="container flex justify-between items-center py-4 md:pt-4">
         {/* Logo section */}
         <div className="text-2xl flex items-center gap-2 font-bold uppercase">
@@ -60,6 +64,11 @@ const Navbar = () => {
         </div>
     </div>
   </nav>
+
+  {/* Mobile Menu Section */}
+  
+</>
+);
 };
 
 export default Navbar;
